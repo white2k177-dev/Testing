@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MTA Gadget Shop</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="siteHeader"><div class="brand">MTA Gadget Shop</div></header>
+<main>
+  
+  <section id="productGrid" class="grid"><div class="loading">Loading...</div></section>
+</main>
+
+<div id="detailModal" class="modal" aria-hidden="true">
+  <div class="shade" data-close></div>
+  <div class="detail" role="dialog" aria-modal="true">
+    <button class="close" data-close aria-label="Close">×</button>
+    <div id="detailHero" class="detailHero"></div>
+    <div class="detailBody">
+      <div id="detailPrice" class="priceBlock"></div>
+      <h1 id="detailTitle"></h1>
+      <section id="reviewSection" class="reviewSection"><div class="sectionTitle">Review / Preview</div><div id="reviewThumbs" class="reviewThumbs"></div></section>
+      <section id="detailDescriptionWrap" class="infoSection"><div class="sectionTitle">Description</div><p id="detailDescription"></p></section>
+      <div class="deliveryInfo">
+        <div><span>Inside Dhaka City</span><b>৳90</b></div>
+        <div><span>Outside Dhaka City</span><b>৳150</b></div>
+        <small>Delivery charges may be higher for multiple items.</small>
+      </div>
+      <a id="buyButton" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<div id="imageViewer" class="imageViewer" aria-hidden="true"><button class="viewerClose" data-viewer-close>×</button><img id="viewerImage" alt="Preview"><div class="zoomHint">Pinch / double tap to zoom</div></div>
+<div id="videoViewer" class="videoViewer" aria-hidden="true"><button class="viewerClose" data-video-close>×</button><div class="videoBox"><iframe id="viewerVideo" title="Review video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div></div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+</body></html>
